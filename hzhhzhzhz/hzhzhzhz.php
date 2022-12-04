@@ -16,10 +16,12 @@ class AleBooking
         add_action('init',array($this,'custom_post_type'));
      }
      function custom_post_type(){
-        register_post_type('room',array(
+        register_post_type('room',
+            [
             'public' => true,
             'label' => esc_html__( 'Новость', 'AleBooking'),
-            'supports'  => array('title','editor','author','thumbnail','comments')
+            'supports'  => ['title','editor','author','thumbnail','comments']
+            ]
         ));
      } 
     
@@ -29,6 +31,7 @@ class AleBooking
 if(class_exists('AleBooking')){
     new AleBooking('hzhzhz');
 }
+
 
 
 
