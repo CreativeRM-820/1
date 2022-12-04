@@ -22,7 +22,7 @@ class AleBooking
             'label' => esc_html__( 'Новость', 'AleBooking'),
             'supports'  => ['title','editor','author','thumbnail','comments']
             ]
-        ));
+        );
      } 
     
 
